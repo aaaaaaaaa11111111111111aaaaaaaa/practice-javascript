@@ -55,7 +55,7 @@ function startNumberGuessgame(){
  
     button.addEventListener("click",function(){
         count++;
-        counter.textContent=count;
+        counter.textContent=`試行回数: ${count}`;
         const val =parseInt(input.value)
         if (randomNumber == val){
             message.textContent="正解"
@@ -73,6 +73,7 @@ function startNumberGuessgame(){
         }}
     })
     gameContainer.appendChild(button);
+    counter.textContent=`試行回数: ${count}`;
     gameContainer.appendChild(counter);
 }
 startNumberGuessgame();
